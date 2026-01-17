@@ -1,0 +1,2 @@
+require("magictt")
+print("hello")
