@@ -1,27 +1,14 @@
 return {
   'nvim-treesitter/nvim-treesitter',
   lazy = false,
-
+  build = ':TSUpdate',
+  opts = {  -- CHANGE config() to opts = 
+    ensure_installed = { "html", "css", "javascript", "typescript", "tsx" },
+    highlight = { enable = true },
+    indent = { enable = true },
+  },
   dependencies = {
     'windwp/nvim-ts-autotag',
   },
-
-  config = function()
-    
-    vim.api.nvim_create_autocmd('FileType', {
-      pattern = {
-        'html',
-        'css',
-        'javascript',
-        'javascriptreact',
-        'typescriptreact',
-        'python',
-        'markdown',
-      },
-      callback = function()
-        vim.treesitter.start()
-        vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
-      end,
-    })
-  end,
 }
+
