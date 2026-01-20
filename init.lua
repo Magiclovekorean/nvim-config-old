@@ -1,2 +1,2 @@
-require("magictt")
-print("hello")
+require('config.options')
+require('config.keybinds')
