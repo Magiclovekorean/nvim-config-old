@@ -6,6 +6,7 @@ return {
     ensure_installed = { "html", "css", "javascript", "typescript", "tsx" },
     highlight = { enable = true },
     indent = { enable = true },
+    auto_install = true,
   },
   dependencies = {
     'windwp/nvim-ts-autotag',
