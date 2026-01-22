@@ -3,7 +3,7 @@ return {
   lazy = false,
   build = ':TSUpdate',
   opts = {  -- CHANGE config() to opts = 
-    ensure_installed = { "html", "css", "javascript", "typescript", "tsx" },
+    ensure_installed = { "html", "css", "javascript", "jsx", "python", },
     highlight = { enable = true },
     indent = { enable = true },
     auto_install = true,
